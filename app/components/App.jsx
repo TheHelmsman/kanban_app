@@ -5,6 +5,7 @@ import LaneActions from '../actions/LaneActions';
 import LaneStore from '../stores/LaneStore';
 
 export default class App extends React.Component {
+
   render() {
     return (
       <div>
@@ -20,6 +21,7 @@ export default class App extends React.Component {
       </div>
     );
   }
+  
   addItem() {
     LaneActions.create({name: 'New lane'});
   }
