@@ -7,9 +7,7 @@ import LaneActions from '../actions/LaneActions';
 import Editable from './Editable.jsx';
 
 export default class Lane extends React.Component {
-
   constructor(props) {
-
     super(props);
 
     const id = props.lane.id;
@@ -18,9 +16,7 @@ export default class Lane extends React.Component {
     this.deleteNote = this.deleteNote.bind(this, id);
     this.editName = this.editName.bind(this, id);
   }
-
   render() {
-
     const {lane, ...props} = this.props;
 
     return (
@@ -45,29 +41,22 @@ export default class Lane extends React.Component {
       </div>
     );
   }
-
   addNote(laneId) {
-    
     NoteActions.create({task: 'New task'});
     LaneActions.attachToLane({laneId});
   }
-
   editNote(id, task) {
-
     NoteActions.update({id, task});
   }
-
   deleteNote(laneId, noteId) {
-
     LaneActions.detachFromLane({laneId, noteId});
     NoteActions.delete(noteId);
   }
-
   editName(id, name) {
-
     if(name) {
       LaneActions.update({id, name});
-    } else {
+    }
+    else {
       LaneActions.delete(id);
     }
   }
