@@ -4,6 +4,8 @@
   "description": "Kanban application project with Webpack and React",
   "main": "index.js",
   "scripts": {
+    "deploy": "node ./lib/deploy.js",
+    "build": "webpack",
     "start": "webpack-dev-server"
   },
   "author": "",
@@ -25,7 +27,10 @@
     "alt-container": "^1.0.0",
     "array.prototype.findindex": "^1.0.0",
     "node-uuid": "^1.4.7",
-    "react": "^0.14.3",
+    "react": "^0.14.5",
+    "react-addons-update": "^0.14.5",
+    "react-dnd": "^2.0.2",
+    "react-dnd-html5-backend": "^2.0.2",
     "react-dom": "^0.14.3"
   }
 }
